@@ -66,3 +66,6 @@ class Contact {
   function countByCityOrState(cityOrState) {
     return addressBook.filter(contact => contact.city === cityOrState || contact.state === cityOrState).length;
   }
+  function sortByName() {
+    return addressBook.sort((a, b) => a.firstName.localeCompare(b.firstName) || a.lastName.localeCompare(b.lastName));
+  }
