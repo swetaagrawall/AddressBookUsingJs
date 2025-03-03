@@ -24,3 +24,10 @@ class Contact {
     if (!zipRegex.test(contact.zip) || !phoneRegex.test(contact.phone) || !emailRegex.test(contact.email)) return false;
     return true;
   }
+  function addContact(contact) {
+    if (validateContact(contact)) {
+      addressBook.push(contact);
+    } else {
+      console.error('Invalid Contact');
+    }
+  }
